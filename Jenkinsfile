@@ -11,7 +11,7 @@ pipeline {
             steps {
                 echo 'Downloading source code from GitHub'
                 git branch: 'main',
-                    url: 'https://github.com/YOUR-USERNAME/jenkins-tomcat-demo.git'
+                    url: 'https://github.com/Ayush-Gole8/DevOps3'
             }
         }
 
@@ -43,7 +43,7 @@ pipeline {
                 echo 'Deploying application to Tomcat'
                 bat '''
                     copy /Y target\jenkins-demo.war ^
-                    "C:\apache-tomcat-11.0.24\webapps\jenkins-demo.war"
+                    "C:\apache-tomcat-11.0.26\webapps\jenkins-demo.war"
                 '''
             }
         }
